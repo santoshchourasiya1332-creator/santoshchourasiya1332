@@ -1,0 +1,23 @@
+Hi 👋 I’m Santosh Chourasiya  
+
+I am an Application Support Engineer (L2) with 5+ years of experience in the banking and financial domain, currently working as an Associate Consultant at Infosys. I am actively transitioning into a DevOps role with hands-on learning and practical implementation.
+
+🔹 Strong experience in Production Support, Monitoring & Observability  
+🔹 Working with Azure Cloud, Kubernetes, Prometheus, Grafana  
+🔹 Skilled in Incident, Problem & Change Management (ITIL)  
+🔹 Passionate about automation, CI/CD pipelines, and cloud-native tools  
+
+### 🔧 Tech Stack
+- **Cloud:** Azure  
+- **DevOps:** Jenkins, Git, GitHub, Docker (learning), Kubernetes  
+- **Monitoring:** Prometheus, Grafana, Azure Monitor, Application Insights  
+- **Scripting & DB:** SQL, UNIX/Linux  
+- **Tools:** ServiceNow, Autosys, Azure Data Factory  
+
+### 🎯 Current Focus
+- Building CI/CD pipelines using Jenkins  
+- Containerization with Docker  
+- Kubernetes workload management  
+- Infrastructure & Monitoring automation  
+
+📫 Reach me at: santoshchourasiya1332@gmail.com  
