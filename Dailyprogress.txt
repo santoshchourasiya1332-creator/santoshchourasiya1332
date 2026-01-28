@@ -65,7 +65,7 @@ I created a Freestyle Jenkins Job and configured:
 GitHub repository URL
 Branch change from master to main
 Build step to compile Java code
-SCM polling (* * * * *) to detect code changes automatically
+SCM polling (H/5 * * * *) to detect code changes automatically
 Result
 Whenever I pushed code to GitHub:
 Jenkins automatically pulled the code
