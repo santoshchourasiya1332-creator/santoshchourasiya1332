@@ -1,0 +1,156 @@
+CI/CD with Jenkins – Day 1 & Day 2
+(Theory + Practical Implementation – What I Learned & Implemented)
+Overview
+These sessions focused on understanding and implementing Continuous Integration (CI) using Git, GitHub, Jenkins, Maven, and Java Spring Boot.
+I worked hands-on by creating repositories, writing Java code, configuring Jenkins jobs, and generating executable artifacts.
+Day 1 – Git, GitHub & Jenkins Basics with Java
+What I Implemented
+On Day 1, I focused on setting up the complete CI foundation, starting from local code development to automated builds using Jenkins.
+Git & GitHub Implementation
+I created a local working directory:
+Copy code
+
+D:\Devopsbycloudhub
+Inside this directory, I created and managed multiple repositories, including:
+.git – Git metadata directory
+MyFirstHelloWorldRepo – Java practice repository
+mymachineinfo – System-related practice repo
+santoshchourasiya1332 – GitHub-linked folder
+This confirms that I worked with multiple repositories and Git tracking locally.
+Java Program Development
+Inside MyFirstHelloWorldRepo, I created the following files:
+Helloworld.java – Java source file
+Helloworld.class – Compiled bytecode file
+January26_2020.java – Java program related to Republic Day
+README.md – Project documentation
+Java Compilation & Execution
+I compiled the Java source file using:
+Copy code
+Bash
+javac Helloworld.java
+This generated:
+Copy code
+
+Helloworld.class
+I then executed the program using:
+Copy code
+Bash
+java Helloworld
+This helped me clearly understand:
+Difference between .java (source code) and .class (bytecode)
+How Java code runs via JVM, not directly on the OS
+Java – Theory (Interview Ready)
+Java is a:
+High-level
+Object-oriented
+Class-based programming language
+Key characteristics:
+Platform-independent (Write Once, Run Anywhere)
+Runs on JVM (Java Virtual Machine)
+Secure, robust, and multi-threaded
+Widely used in enterprise applications
+➡️ The .class file proves platform independence because the same bytecode can run on Windows or Linux if JVM is installed.
+Jenkins Setup (Day 1)
+I installed Jenkins on a Google Cloud VM with:
+Ubuntu 24.04 LTS
+Java JDK installed
+Steps performed:
+Accessed Jenkins via IP:8080
+Retrieved initial admin password from:
+Copy code
+Bash
+/var/lib/jenkins/secrets/initialAdminPassword
+CI Job Configuration
+I created a Freestyle Jenkins Job and configured:
+GitHub repository URL
+Branch change from master to main
+Build step to compile Java code
+SCM polling (* * * * *) to detect code changes automatically
+Result
+Whenever I pushed code to GitHub:
+Jenkins automatically pulled the code
+Compiled it
+Generated output without manual intervention
+➡️ This demonstrated Continuous Integration in real time.
+Day 2 – Jenkins + Maven + Spring Boot CI Integration
+What I Implemented
+Day 2 focused on real-world CI implementation using Maven and Spring Boot.
+Jenkins Infrastructure Setup
+I created a Jenkins server with:
+2 CPU
+8 GB RAM
+25 GB storage
+Ubuntu 24.04 LTS
+Installed:
+Java 17 JDK
+Jenkins
+Maven
+Maven – Theory & Practical Understanding
+Maven is a:
+Build automation tool
+Dependency management tool for Java projects
+POM.xml (Project Object Model)
+Central configuration file
+Defines:
+Dependencies
+Plugins
+Project structure
+Build lifecycle
+Without Maven:
+Dependencies must be downloaded manually
+High risk of version conflicts
+Build Concept (Interview Important)
+A build is the process of:
+Compiling source code
+Running unit tests
+Generating executable artifacts (JAR/WAR)
+Maven command used:
+Copy code
+Bash
+mvn package
+Output:
+JAR file generated inside the target directory
+Spring Boot – Theory
+Spring Boot is an extension of the Spring Framework that:
+Provides auto-configuration
+Includes embedded servers (Tomcat)
+Allows creation of standalone, production-ready applications
+Reduces boilerplate code
+Difference from Spring:
+Spring requires external server & heavy configuration
+Spring Boot is lightweight and faster to deploy
+Jenkins + Maven CI Job
+I created a Jenkins job named:
+Copy code
+
+Project 1 CI
+Job configuration:
+Connected to GitHub repository
+Used Maven build step (mvn package)
+Generated executable JAR file automatically
+Platform Independence Proof
+I downloaded the generated JAR file and ran it on:
+Windows machine
+Linux machine
+Command used:
+Copy code
+Bash
+java -jar application.jar -Dserver.port=8083
+➡️ Same JAR file worked on both OS, proving Java’s platform independence.
+Source & Target Folder Explanation
+SRC Folder
+Contains application source code
+Unit test cases
+Target Folder
+Contains compiled output
+JAR/WAR build artifacts
+Unit Testing – Theory
+Unit testing:
+Tests individual functions/components
+Validates input against expected output
+Example:
+Email validation logic
+Business rule verification
+In CI:
+If unit tests fail, the build fails
+Ensures application stability
