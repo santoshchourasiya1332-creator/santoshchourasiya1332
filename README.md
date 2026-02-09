@@ -1,9 +1,17 @@
 # AWS S3 – Complete Notes
 ## Core Fundamentals
 ### Buckets & Objects
+
+**AWS S3 Static Website Hosting Flow**
+![AWS S3 Static Website](images/static_website.png)
+
+**S3 Bucket Structure**
+![AWS S3 Bucket](images/Bucket.png)
+
 - Bucket is a unique container
 - Objects store actual data
 - Global namespace is required
+
 **S3 is a key-value based object storage service**
  
 1. Core Fundamentals (The Basics)
